@@ -1,8 +1,8 @@
-import Header from './header';
+import 'glamor/reset';
+import './layout.scss';
 
 const Layout = props => (
-  <div>
-    <Header />
+  <div className="layout">
     {props.children}
   </div>
 );

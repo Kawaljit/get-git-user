@@ -1,0 +1,27 @@
+.lookup {
+  height: 80px;
+  width: 700px;
+  border-radius: 10px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  &__txt {
+    height: 55px;
+    flex: 1;
+    outline: none;
+    border: 0;
+  }
+  &__btn {
+    background: #174885;
+    height: 55px;
+    width: 55px;
+    border-radius: 10px;
+    &:after {
+      content: '⌕';
+      display: block;
+      color: white;
+    }
+  }
+}

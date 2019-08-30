@@ -1,10 +1,11 @@
 
 import { useState, useRef, useEffect } from 'react';
 import fetch from 'isomorphic-unfetch';
-import Layout from '../components/layout';
-import User from '../components/user';
-import Lookup from '../components/lookup';
-import CustomError from '../components/customError'
+import Head from '../components/head';
+import Layout from '../components/layout/layout';
+import User from '../components/user/user';
+import Lookup from '../components/lookup/lookup';
+import CustomError from '../components/customError';
 
 
 function Index() {
@@ -48,11 +49,14 @@ function Index() {
   }, [searchText]);
 
   return (
-    <Layout >
-      <Lookup setSearchText={setSearchText} />
-      {userData && <User userData={userData} />}
-      {customError && <CustomError customError={customError} />}
-    </Layout>
+    <>
+      <Head title='Get git user' bodyStyle='body, html{height: 100%;}body {background: #e8e8e8;}'/>
+      <Layout>
+        <Lookup setSearchText={setSearchText} />
+        {userData && <User userData={userData} />}
+        {customError && <CustomError customError={customError} />}
+      </Layout>
+    </>
   );
 }
 

@@ -1,0 +1,30 @@
+
+.git-user-card {
+  margin-top: 20px;
+  min-height: 24rem;
+  max-width: 730px;
+  width: 90%;
+  border-radius: 10px;
+  background: white;
+  display: flex;
+  flex-direction: row;
+  .git-userBio,
+  .git-userStats {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    justify-items: center;
+    align-items: center;
+  }
+  .git-userStats {
+    background: #F6B83D;
+    border-radius: 0 10px 10px 0;
+   
+  }
+  .git-userAvatar {
+    display: block;
+    width: 200px;
+    border-radius: 50%;
+  }
+}
