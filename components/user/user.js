@@ -5,17 +5,28 @@ const User = (props) => (
       <img src={props.userData.avatar_url} className="git-userAvatar"/>
       <h1 className="git-userName">{props.userData.name}</h1>
       <p className="git-userBioText">{props.userData.bio}</p>
-      <p className="git-userCompany">{props.userData.company}</p>
-      <p className="git-userCompany">{props.userData.location}</p>
-      <span>{props.userData.followers}</span>
-      <span>{props.userData.following}</span>
-      <p>
-        <a href={props.userData.html_url}>Check on Github</a>
-      </p>
+      <ul className="git-userVcard">
+        <li className="list">
+          <span>
+            {props.userData.company}
+          </span>
+        </li>
+        <li className="list">
+          <span>
+            {props.userData.location}
+          </span>
+        </li>
+        <li className="list">
+          <a href={props.userData.html_url}>Check on Github</a>
+        </li>
+      </ul>
     </div>
     <div className="git-userStats">
       <div className="git-userStatsCard"></div>
-      <div className="git-userStatsCard"></div>
+      <div className="git-userStatsCard">
+        <span>Followers on github{props.userData.followers}</span>
+        <span>Following on github: {props.userData.following}</span>
+      </div>
       <div className="git-userStatsCard"></div>
     </div>
   </div>
