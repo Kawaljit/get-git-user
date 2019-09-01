@@ -28,8 +28,8 @@ export default function User(props) {
       <div className="git-userStats">
         <div className="git-userStatsCard"></div>
         <div className="git-userStatsCard">
-          <span>Followers on github{props.userData.followers}</span>
-          <span>Following on github: {props.userData.following}</span>
+          <span className="git-userNumber">{props.userData.followers}</span>
+          <span className="git-userNumber">{props.userData.following}</span>
         </div>
         <div className="git-userStatsCard"></div>
       </div>

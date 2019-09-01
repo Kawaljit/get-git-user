@@ -1,6 +1,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import fetch from 'isomorphic-unfetch';
+import { CSSTransition } from 'react-transition-group';
 import Head from '../components/head';
 import Layout from '../components/layout/layout';
 import User from '../components/user/user';
@@ -39,7 +40,7 @@ function Index() {
             setError(null);
           } else {
             setUserData(null);
-            setError(response)
+            setError(response);
           }
         } catch (err) {
           console.log(err);
